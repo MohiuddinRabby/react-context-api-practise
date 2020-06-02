@@ -1,8 +1,9 @@
 import React from "react";
 import "./App.css";
 import Nav from "./Nav";
-import { MovieProvider } from "./useCustomContex";
+import { MovieProvider } from "./Context";
 import Movie from "./Movie";
+
 function App() {
   return (
     <div>

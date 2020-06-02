@@ -1,19 +1,18 @@
-import React from 'react';
-import './Nav.css';
-import {useCusCon} from './useCustomContex';
+import React from "react";
+import "./Nav.css";
+import { useMovieContex } from "./Context";
 const Nav = () => {
-const [movie] =useCusCon();
-console.log('nav',movie)
-    return (
-        <div>
-    <div className="header">
-      <nav>
-        <span>MRabby</span>
-    <span>{movie.length}</span>
-      </nav>
+  const [moives, setMovies] = useMovieContex();
+  return (
+    <div>
+      <div className="header">
+        <nav>
+          <span>MRabby</span>
+          <span>{moives.length}</span>
+        </nav>
+      </div>
     </div>
-        </div>
-    );
+  );
 };
 
 export default Nav;

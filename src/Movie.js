@@ -1,15 +1,13 @@
 import React from 'react';
-import { useCusCon } from './useCustomContex';
-import MovieList from './MovieList';
+import { useMovieContex } from './Context';
 
 const Movie = () => {
-    const [movie] = useCusCon();
+    const[movies,setMovies] = useMovieContex();
     return (
         <div>
             {
-                movie.map(movie=><MovieList movies={movie}></MovieList>)
+                movies.map(movie=><li>{movie.movie}</li>)
             }
-            
         </div>
     );
 };
