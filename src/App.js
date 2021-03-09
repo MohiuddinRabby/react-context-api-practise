@@ -1,18 +1,17 @@
 import React from "react";
-import "./App.css";
-import Nav from "./Nav";
-import { MovieProvider } from "./Context";
-import Movie from "./Movie";
+import BookList from "./components/BookList/BookList";
+import Navbar from "./components/Navbar/Navbar";
+import BookContextProvider from "./contexts/BookContext";
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <MovieProvider>
-        <Nav />
-        <Movie/>
-      </MovieProvider>
+    <div className="App">
+      <BookContextProvider>
+        <Navbar />
+        <BookList />
+      </BookContextProvider>
     </div>
   );
-}
+};
 
 export default App;
